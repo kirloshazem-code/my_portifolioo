@@ -1,0 +1,222 @@
+/* Fonts */
+.playwrite-nz-guides-regular { font-family: "Playwrite NZ Guides", cursive; }
+.indie-flower-regular { font-family: "Indie Flower", cursive; }
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(9, 9, 75);
+    color: #fff;
+    font-family: "Indie Flower", cursive;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: "Playwrite NZ Guides", cursive;
+    font-size: 30px;
+    color: gold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: gold;
+}
+
+/* Header About */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.avatar {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.avatar img {
+    width: 80%;
+    border-radius: 8px;
+    border: 5px solid rgb(14,1,1);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+.aboutme {
+    flex: 2 1 400px;
+}
+
+.aboutme h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.aboutme h3 {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.social a {
+    font-size: 30px;
+    color: #fff;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+.social a:hover { color: gold; }
+
+/* Sections */
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h1 {
+    font-size: 2rem;
+    background-color: black;
+    padding: 15px 0;
+}
+
+.section-header h1::first-letter {
+    font-size: 3rem;
+    color: gold;
+}
+
+/* Projects & Certificates */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.item {
+    position: relative;
+    width: 260px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    transition: 0.3s;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.item h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: gold;
+    text-align: center;
+    padding: 5px 10px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.item:hover img { filter: brightness(1.1); }
+.item:hover h2 { transform: translate(-50%, -50%) scale(1); }
+
+/* Contact */
+.contact {
+    padding: 40px 20px;
+}
+
+.contact h1 {
+    text-align: center;
+    background-color: black;
+    padding: 15px 0;
+}
+
+.form {
+    max-width: 700px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: rgb(223,192,17);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover { background-color: rgb(90,79,17); }
+
+/* Footer */
+/* Footer */
+footer.footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 25px 10px;
+    font-family: "Playwrite NZ Guides", cursive;
+    line-height: 1.6;
+}
+
+footer.footer p {
+    margin: 5px 0;
+}
+
+
+/* Responsive */
+@media(max-width: 768px){
+    .about { flex-direction: column; padding: 20px; }
+    .aboutme { text-align: center; }
+    .avatar img { width: 60%; margin: auto; }
+    .navbar { flex-direction: column; gap: 10px; }
+    .nav-links { flex-direction: column; gap: 10px; }
+    .content { flex-direction: column; align-items: center; }
+    .item { width: 90%; height: auto; }
+}
